@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+$bg-color-dark: rgba(0, 0, 0, 0.3);
+$color-white: #fff;
+
+%button-refresh {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  background: $bg-color-dark;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .5s;
+
+  img {
+    width: 2rem;
+    filter: invert(100%);
+  }
+
+  &:hover {
+    color: #000;
+    background: $color-white;
+
+    & img {
+      filter: invert(0);
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: $color-white;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+}
+
+.useful {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  row-gap: .5rem;
+  column-gap: .5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.bg-change {
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  background: $bg-color-dark;
+  backdrop-filter: blur(0.5rem);
+  overflow: hidden;
+
+  button {
+    @extend %button-refresh;
+    margin: .5rem;
+  }
+
+  &__title {
+    display: none;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 30rem;
+  min-height: 11rem;
+
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  background: $bg-color-dark;
+  backdrop-filter: blur(0.5rem);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:nth-child(2) {
+      align-items: flex-end;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+    &__icon {
+    font-size: 5rem;
+    filter: hue-rotate(190deg)
+  }
+
+  &__temperature {
+    margin-left: 1rem;
+    font-size: 3.2rem;
+  }
+
+  &__place {
+    align-self: flex-end;
+    font-weight: bold;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 
+              0px 18px 23px rgba(0,0,0,0.1), 0px 11px 10px rgba(0,0,0,0.8);
+}
+
+.time {
+  margin-top: 5vh;
+  font-size: 12.8rem;
+}
+
+.date {
+  font-size: 2.8rem;
+}
+
+.greeting-block,
+.focus-block {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+h2 {
+  opacity: 0.8;
+}
+
+.weather__place,
+.name,
+.focus {
+  outline: none;
+}
+
+.rand-quote {
+  position: relative;
+  max-width: 120rem;
+  padding: 1rem 2rem 4rem;
+  margin: 1rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  border-radius: 2rem;
+  background: $bg-color-dark;
+  backdrop-filter: blur(0.5rem);
+
+  button {
+    @extend %button-refresh;
+
+    position: absolute;
+    bottom: .5rem;
+    left: calc(50% - 1.5rem);
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+  }
+
+  &__author {
+    font-weight: bold;
+  }
+}
+
+.rotating {
+  animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .time {
+    font-size: 6rem;
+  }
+  
+  .weather {
+    font-size: 1.4rem;
+  }
+
+  .greeting-block,
+  .focus-block {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .useful {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bg-change {
+    align-self: flex-start;
+  }
+}

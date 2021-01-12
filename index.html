@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>momentum</title>
+  <link rel="stylesheet" href="css/owfont-regular.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <section class="useful">
+    <div class="bg-change">
+      <button class="btn-next">
+        <img src="assets/icons/refresh-4.svg" alt="refresh icon">
+      </button>
+      <div class="bg-change__title">change image</div>
+    </div>
+    <div class="weather">
+      <div class="weather__row">
+        <div class="weather__col">
+          <div class="weather__item">
+            <i class="weather__icon owf"></i>
+            <div class="weather__temperature"></div>
+          </div>
+          <div class="weather__description"></div>
+        </div>
+        <div class="weather__col">
+          <div class="weather__pressure">Pressure: <span></span></div>
+          <div class="weather__humidity">Humidity: <span></span></div>
+          <div class="weather__wind">Wind: <span></span></div>
+        </div>
+      </div>
+      <div class="weather__place" contenteditable="true"></div>
+    </div>
+  </section>
+  <section class="main">
+    <time class="time"></time>
+    <time class="date"></time>
+    <div class="greeting-block">
+      <h1>
+        <span class="greeting"></span><span class="name" contenteditable="true"></span>
+      </h1>
+    </div>
+    <div class="focus-block">
+      <h3>What Is Your Focus For Today?</h3>
+      <h3 class="focus" contenteditable="true"></h3>
+    </div>
+  </section>
+  <section class="side-api">
+    <blockquote class="rand-quote">
+      <button class="rand-quote__update">
+        <img src="assets/icons/refresh-4.svg" alt="refresh icon">
+      </button>
+      <p class="rand-quote__text"></p>
+      <p class="rand-quote__author"></p>
+    </blockquote>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

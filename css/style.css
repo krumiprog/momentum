@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+.bg-change button, .rand-quote button {
+  width: 3rem;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.bg-change button img, .rand-quote button img {
+  width: 2rem;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.bg-change button:hover, .rand-quote button:hover {
+  color: #000;
+  background: #fff;
+}
+
+.bg-change button:hover img, .rand-quote button:hover img {
+  -webkit-filter: invert(0);
+          filter: invert(0);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background-size: cover;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.useful {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: .5rem;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.bg-change {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  overflow: hidden;
+}
+
+.bg-change button {
+  margin: .5rem;
+}
+
+.bg-change__title {
+  display: none;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+
+.weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 30rem;
+  min-height: 11rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+}
+
+.weather__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.weather__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weather__col:nth-child(2) {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.weather__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weather__icon {
+  font-size: 5rem;
+  -webkit-filter: hue-rotate(190deg);
+          filter: hue-rotate(190deg);
+}
+
+.weather__temperature {
+  margin-left: 1rem;
+  font-size: 3.2rem;
+}
+
+.weather__place {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: bold;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1), 0px 11px 10px rgba(0, 0, 0, 0.8);
+}
+
+.time {
+  margin-top: 5vh;
+  font-size: 12.8rem;
+}
+
+.date {
+  font-size: 2.8rem;
+}
+
+.greeting-block,
+.focus-block {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+h2 {
+  opacity: 0.8;
+}
+
+.weather__place,
+.name,
+.focus {
+  outline: none;
+}
+
+.rand-quote {
+  position: relative;
+  max-width: 120rem;
+  padding: 1rem 2rem 4rem;
+  margin: 1rem;
+  font-size: 1.6rem;
+  font-style: italic;
+  border-radius: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+}
+
+.rand-quote button {
+  position: absolute;
+  bottom: .5rem;
+  left: calc(50% - 1.5rem);
+}
+
+.rand-quote__text {
+  margin-bottom: 1rem;
+}
+
+.rand-quote__author {
+  font-weight: bold;
+}
+
+.rotating {
+  -webkit-animation: rotating 1s linear infinite;
+          animation: rotating 1s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .time {
+    font-size: 6rem;
+  }
+  .weather {
+    font-size: 1.4rem;
+  }
+  .greeting-block,
+  .focus-block {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .useful {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bg-change {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+/*# sourceMappingURL=style.css.map */
